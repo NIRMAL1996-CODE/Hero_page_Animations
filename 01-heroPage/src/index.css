@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Momo+Signature&family=Science+Gothic:wdth,wght@200,100..900&family=Sixtyfour&display=swap');
+
+html,body{
+  overflow: hidden;
+  background-color: #A3D78A;
+   font-family: "Momo Signature";
+  font-weight: 400;
+  font-style: normal;
+  color:#3b4f27;
+}
