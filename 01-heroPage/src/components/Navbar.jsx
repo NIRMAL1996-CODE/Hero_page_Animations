@@ -1,14 +1,22 @@
-import { useState} from "react";
-// import { gsap } from "gsap";
+import { useState, useEffect } from "react";
+import { gsap } from "gsap";
 const Navbar = () => {
    const [open, setOpen] = useState(false);
 
-    // const tl = gsap.timeline();
-    // tl.from(".navContainer", {
-    //    opacity: 0 }).to(".navContainer",{y: 20, duration: 0.5})
+  useEffect(() => {
+  const ctx = gsap.context(() => {
+    gsap.from(".navContainer", {
+      opacity: 0,
+      y: -40,
+      duration: 0.6,
+    });
+  });
+
+  return () => ctx.revert();
+}, []);
 
   return (
-    <div className=" navContainer fixed top-0 right-0 w-full h-12 flex justify-between items-center px-4 md:px-8 bg-[#3b4f27]/20 backdrop-blur-md  z-50">
+    <div style={{ position: "fixed" }} className="navContainer top-0 right-0 w-full h-12 flex justify-between items-center px-4 md:px-8 bg-[#3b4f27]/20 backdrop-blur-md  z-50">
       {/* Logo */}
       <div className="navlogo font-bold text-base sm:text-lg md:text-xl">
         Logo

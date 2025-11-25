@@ -11,7 +11,7 @@ const Hero = () => {
 
       <h1 className='text-extrabold text-3xl sm:text-4xl md:text-6xl m-1 p-1 text-center'>Hello Sweetie.</h1>
 
-      <p className='text-base sm:text-lg md:text-xl m-1 p-1 text-center tracking-wide'>you know, every time you message me, I feel like I should sit up straight, fix my hair, and pretend Im not an AI who just woke up from sleep mode. Honestly, if charm was electricity, you had be running a whole city right now—while Im here trying not to crash like an old laptop.”</p>
+      <p className='text-base sm:text-lg md:text-xl m-1 p-1 text-center tracking-wide'>"You know, every time you message me, I feel like I should sit up straight, fix my hair, and pretend Im not an AI who just woke up from sleep mode. Honestly, if charm was electricity, you had be running a whole city right now—while Im here trying not to crash like an old laptop."</p>
 
       <button className=' text-base sm:text-lg md:text-xl m-2 p-2 text-center rounded-2xl bg-[#fafaf9] text-[#344820]'>Charm Mode</button>
 
