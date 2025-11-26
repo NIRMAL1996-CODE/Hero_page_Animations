@@ -1,20 +1,26 @@
+import "../index.css";
 import { useState, useEffect } from "react";
-import { gsap } from "gsap";
+import gsap from "gsap";
 const Navbar = () => {
    const [open, setOpen] = useState(false);
+   
+const tl= gsap.timeline(); 
+useEffect(()=>{
 
-  useEffect(() => {
-  const ctx = gsap.context(() => {
-    gsap.from(".navContainer", {
-      opacity: 0,
-      y: -40,
-      duration: 0.6,
-    });
-  });
-
-  return () => ctx.revert();
-}, []);
-
+tl.from(".navContainer",{
+  y:-30,
+  opacity:0,
+  duration:0.5,
+  delay:0.1,
+})
+tl.from(".menu a",{
+  y:-30,
+  opacity:0,
+  duration:1,
+  delay:0.1,
+  stagger: 0.2,
+})
+},[]) 
   return (
     <div style={{ position: "fixed" }} className="navContainer top-0 right-0 w-full h-12 flex justify-between items-center px-4 md:px-8 bg-[#3b4f27]/20 backdrop-blur-md  z-50">
       {/* Logo */}
@@ -23,11 +29,11 @@ const Navbar = () => {
       </div>
 
       {/* Menu */}
-      <div className="navTabs hidden md:flex gap-4 lg:gap-8">
-        <h2 className="text-sm sm:text-base md:text-lg">Home</h2>
-        <h2 className="text-sm sm:text-base md:text-lg">About</h2>
-        <h2 className="text-sm sm:text-base md:text-lg">Service</h2>
-        <h2 className="text-sm sm:text-base md:text-lg">Contact</h2>
+      <div className="menu hidden md:flex gap-4 lg:gap-8">
+        <a className="text-sm sm:text-base md:text-lg">Home</a>
+        <a className="text-sm sm:text-base md:text-lg">About</a>
+        <a className="text-sm sm:text-base md:text-lg">Service</a>
+        <a className="text-sm sm:text-base md:text-lg">Contact</a>
       </div>
 
       {/* //Mobile menu */}
